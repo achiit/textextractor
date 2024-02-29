@@ -58,6 +58,11 @@ def detect_emotion(messages):
         return {'error': str(e)}
 
 
+@app.route('/', methods=['GET'])
+def index():
+    return "Hello, World!"
+
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'file' not in request.files:
